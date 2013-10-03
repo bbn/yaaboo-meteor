@@ -5,14 +5,17 @@
 <body>
   {{loginButtons align="right"}}<br>
   <h1>Yaaboo</h1>
-  {{> welcome }}
-  {{> input }}
+  {{#if currentUser}}
+    {{> input }}
+  {{else}}
+    {{> welcome }}
+  {{/if}}
   {{> messages }}
 </body>
 
 <template name="welcome">
   <p>
-    Welcome to the example chat app! Please log in to show your username.
+    Welcome to Yaaboo! Please log in to post a message.
   </p>
 </template>
 
